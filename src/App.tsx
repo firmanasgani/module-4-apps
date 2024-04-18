@@ -9,6 +9,7 @@ import {
   Button,
 } from "antd";
 import Header from "./components/Header";
+import InputForms from "./components/InputForms";
 
 const App = () => {
   const { Content } = Layout;
@@ -71,15 +72,10 @@ const App = () => {
               labelCol={{ span: 4 }}
               wrapperCol={{ span: 20 }}
             >
-              <FormAntd.Item
-                label="Fullname"
-                name="fullname"
-                rules={[
-                  { required: true, message: "Please Input your fullname" },
-                ]}
-              >
-                <InputAnt onChange={(e) => setFullname(e.target.value)} />
-              </FormAntd.Item>
+              <InputForms nameForms="Fullname" labelForms="Fullname" handleChange={setFullname} rules={[{
+                required: true,
+                message: 'Fullname cannot be empty'
+              }]} />
               <FormAntd.Item
                 label="Email"
                 name="email"
