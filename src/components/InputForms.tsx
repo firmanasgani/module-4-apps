@@ -4,24 +4,27 @@ type forms = {
     nameForms: string,
     labelForms: string,
     handleChange: any,
-    rules: any
+    rules: any,
+    password?: boolean,
+    placeholder?: string
 
 }
 const InputForms: React.FC<forms> = ({
     nameForms,
     labelForms,
     handleChange,
-    rules
+    rules,
+    password,
+    placeholder
 }) => {
     return (
         <FormAntd.Item 
             name={nameForms}
             label={labelForms}
             rules={rules}
-            
         >
-            <InputAnt onChange={(e) => handleChange(e.target.value)} />
-
+            { !password ?  <InputAnt onChange={(e) => handleChange(e.target.value)} placeholder={placeholder} /> :  <InputAnt.Password onChange={(e) => handleChange(e.target.value)} /> }
+           
         </FormAntd.Item>
     )
 }
