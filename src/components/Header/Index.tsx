@@ -1,8 +1,8 @@
-const myHeader = () => {
+const Header = () => {
   return (
-    <h1 style={{ textAlign: "center", fontSize: 25, marginBottom: 50 }}>Form Registration</h1>
+    <h1  className="text-3xl font-bold" style={{ textAlign: "center", marginTop:50, marginBottom: 50 }}>Category Apps</h1>
   );
 };
 
 
-export default myHeader;
+export default Header;
