@@ -7,7 +7,6 @@ import {
   Form as FormAntd,
   Button,
   DatePicker,
-  Form,
 } from "antd";
 import Header from "../components/Header/Index";
 import InputForms from "./../components/InputForms";
@@ -17,7 +16,6 @@ const Register = () => {
   const [fullname, setFullname] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [pages, setPages] = useState(0)
-  const [date, setDate] = useState(false);
 
   const [street, setStreet] = useState("");
   const [city, setCity] = useState("");
@@ -28,7 +26,7 @@ const Register = () => {
   const [password, setPassword] = useState<string>("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
-  const [error, setError] = useState(false);
+  // const [error, setError] = useState(false);
   const validateEmail = (email: string) => {
     return String(email)
       .toLowerCase()
@@ -37,17 +35,17 @@ const Register = () => {
       );
   };
 
-  const checkPassword = () => {
-    try {
-      if (password !== confirmPassword) {
-        setError(true);
-        return false;
-      }
-      return true;
-    } catch (err: any) {
-      console.error(`Error handling: ${err.message}`);
-    }
-  };
+  // const checkPassword = () => {
+  //   try {
+  //     if (password !== confirmPassword) {
+  //       setError(true);
+  //       return false;
+  //     }
+  //     return true;
+  //   } catch (err: any) {
+  //     console.error(`Error handling: ${err.message}`);
+  //   }
+  // };
 
   const FormsPageOne = () => {
     return (
@@ -171,7 +169,7 @@ const Register = () => {
             },
           ]}
         />
-        {error ? <p>Password dan konfirmasi password harus sama!</p> : ""}
+        {/* {error ? <p>Password dan konfirmasi password harus sama!</p> : ""} */}
         <FormAntd.Item>
                 <Button
                   style={{ maxWidth: "20%" }}

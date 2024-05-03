@@ -1,6 +1,6 @@
 import "./App.css";
 import Register from "./Pages/Register";
-import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Signup from "./Pages/Signup";
 import Signin from "./Pages/Signin";
 
