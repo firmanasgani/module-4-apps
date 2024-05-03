@@ -3,19 +3,8 @@ import Header from "../components/Header/Index";
 import Footer from "../components/Footer/Index";
 
 const Signup = () => {
-    const [fullname, setFullname ] = useState("")
-    const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
-    const [confirmPassword, setConfirmPassword] = useState("")
 
-    const isPasswordMatched = (pass: string, confirmPass: string) => {
-        try{
-            if(pass === confirmPass) return true
-            return false
-        }catch(err: any) {
-            console.error("error handling: "+err)
-        }
-    }
+   
 
   return (
     <>

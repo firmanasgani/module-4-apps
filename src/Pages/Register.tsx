@@ -24,7 +24,6 @@ const Register = () => {
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState<string>("");
-  const [confirmPassword, setConfirmPassword] = useState("");
 
   // const [error, setError] = useState(false);
   const validateEmail = (email: string) => {
@@ -156,19 +155,7 @@ const Register = () => {
           rules={[{ required: true, message: "Please Input your password" }]}
         />
 
-        <InputForms
-          nameForms="confirmPassword"
-          labelForms="Confirm Password"
-          handleChange={setConfirmPassword}
-          password={true}
-          placeholder="Ex: fox jumping on the lazy dog "
-          rules={[
-            {
-              required: true,
-              message: "Please Repeat your Confirm Password",
-            },
-          ]}
-        />
+       
         {/* {error ? <p>Password dan konfirmasi password harus sama!</p> : ""} */}
         <FormAntd.Item>
                 <Button
