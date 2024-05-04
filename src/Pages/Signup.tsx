@@ -1,6 +1,7 @@
 
 import Header from "../components/Header/Index";
 import Footer from "../components/Footer/Index";
+import { Link } from 'react-router-dom'
 
 const Signup = () => {
 
@@ -85,12 +86,11 @@ const Signup = () => {
                 </button>
               </div>
               <div className="mb-6">
-                <a
-                  className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
-                  href="/signin"
-                >
+                <Link to="/signin" className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800">
+               
                   Sudah punya akun? klik ini
-                </a>
+                
+                </Link>
               </div>
             </form>
           </div>
