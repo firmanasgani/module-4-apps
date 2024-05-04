@@ -6,24 +6,23 @@ import Signup from "./Pages/Signup";
 import Signin from "./Pages/Signin";
 import Home from "./Pages/Home";
 
-const HelloWorld = () => {
-  const token = localStorage.getItem("token");
-  return token ? <Home /> : <NotLoginYet />;
-};
-const App = () => {
+
+function Boostrap(){
+
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route index path="/" element={<HelloWorld />} />
+          <Route index path="/" element={<Home />} />
           <Route path="/register" element={<Register />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/signin" element={<Signin />} />
-          <Route path="/dashboard" element={<HelloWorld />} />
+          <Route path="/dashboard" element={<NotLoginYet />} />
+          <Route path="*" element={<NotLoginYet />} />
         </Routes>
       </BrowserRouter>
     </>
   );
 };
 
-export default App;
+export default Boostrap;

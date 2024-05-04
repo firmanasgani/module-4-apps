@@ -25,7 +25,6 @@ const Register = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState<string>("");
 
-  // const [error, setError] = useState(false);
   const validateEmail = (email: string) => {
     return String(email)
       .toLowerCase()
@@ -34,17 +33,6 @@ const Register = () => {
       );
   };
 
-  // const checkPassword = () => {
-  //   try {
-  //     if (password !== confirmPassword) {
-  //       setError(true);
-  //       return false;
-  //     }
-  //     return true;
-  //   } catch (err: any) {
-  //     console.error(`Error handling: ${err.message}`);
-  //   }
-  // };
 
   const FormsPageOne = () => {
     return (
