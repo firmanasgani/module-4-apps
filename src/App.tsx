@@ -13,7 +13,7 @@ function Boostrap(){
     <>
       <BrowserRouter>
         <Routes>
-          <Route index path="/" element={<Home />} />
+          <Route index path="/" element={<NotLoginYet />} />
           <Route path="/register" element={<Register />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/signin" element={<Signin />} />
